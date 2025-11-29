@@ -1,0 +1,46 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "flashcard-study"
+version = "1.0.0"
+description = "Terminal UI for flash card study with spaced repetition"
+readme = "README.md"
+requires-python = ">=3.11"
+license = {text = "MIT"}
+keywords = ["flashcards", "spaced-repetition", "tui", "learning"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "Intended Audience :: Education",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+]
+
+dependencies = [
+    "textual>=0.80.0",
+    "pydantic>=2.9.0",
+    "typer>=0.15.0",
+    "rich>=13.9.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.3.0",
+    "pytest-asyncio>=0.24.0",
+    "pytest-cov>=6.0.0",
+    "textual-dev>=1.7.0",
+]
+
+[project.scripts]
+flashcard-study = "flashcard_study.cli:app"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["flashcard_study*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+asyncio_mode = "auto"

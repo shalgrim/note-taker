@@ -34,8 +34,26 @@ else
     echo "⚠ No commands directory found. Please copy command files manually."
 fi
 
+# Install Python package
 echo ""
-echo "Setup complete! Available commands:"
+echo "Installing flashcard-study TUI application..."
+if command -v pip3 &> /dev/null; then
+    pip3 install -e "$SCRIPT_DIR"
+    echo "✓ Installed flashcard-study command"
+else
+    echo "⚠ pip3 not found. Please install Python 3.11+ and pip3"
+    echo "  Then run: pip3 install -e $SCRIPT_DIR"
+fi
+
+echo ""
+echo "Setup complete!"
+echo ""
+echo "Claude Code Commands (within Claude):"
 echo "  /create-flash-card  - Create a new flash card"
 echo "  /quiz               - Review cards with spaced repetition"
 echo "  /capture-notes      - Extract cards from conversation"
+echo ""
+echo "Standalone TUI Application (terminal):"
+echo "  flashcard-study           - Launch interactive TUI"
+echo "  flashcard-study --help    - Show all options"
+echo "  flashcard-study --stats   - Quick statistics view"
