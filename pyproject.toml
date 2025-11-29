@@ -24,6 +24,7 @@ dependencies = [
     "pydantic>=2.9.0",
     "typer>=0.15.0",
     "rich>=13.9.0",
+    "genanki>=0.13.0",
 ]
 
 [project.optional-dependencies]

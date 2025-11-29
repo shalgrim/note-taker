@@ -64,6 +64,38 @@ Use Claude Code slash commands for AI-assisted card creation and learning:
 /capture-notes tags:python,web
 ```
 
+### 3. Export to Anki
+
+Export your cards to use in Anki desktop or mobile apps:
+
+```bash
+# Export all cards to "Claude Code" deck
+flashcard-study export my-cards.apkg
+
+# Export to custom deck name
+flashcard-study export --deck "Python Study" python.apkg
+
+# Export only specific tags
+flashcard-study export --tags algorithms,data-structures algo.apkg
+
+# Combine custom deck and tag filtering
+flashcard-study export --deck "Web Development" --tags javascript,react web-dev.apkg
+```
+
+**What gets exported:**
+- All three card types (QA, cloze, multiple choice) are supported
+- All tags are preserved as Anki tags
+- Cards are organized in the specified deck (default: "Claude Code")
+- Your review history stays in the JSON file (Anki will start fresh tracking)
+
+**Import to Anki:**
+1. Export cards: `flashcard-study export cards.apkg`
+2. Open Anki desktop or mobile
+3. File → Import → Select `cards.apkg`
+4. Review in Anki using their spaced repetition algorithm
+
+**Note:** Anki uses its own SM-2 algorithm, which differs slightly from our implementation. If you want to keep using our algorithm, stick with the TUI or `/quiz` command.
+
 ## Example Workflow
 
 ### Daily Review (Token-Free)

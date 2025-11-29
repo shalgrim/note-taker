@@ -44,6 +44,19 @@ flashcard-study --help    # Show all options
 - `Space` - Reveal answer (during quiz)
 - `0` / `5` / `1` - Score wrong/partial/correct (during quiz)
 
+### Export to Anki
+
+Export your cards to Anki format (.apkg files) for use in Anki desktop or mobile apps.
+
+```bash
+flashcard-study export cards.apkg                           # Export all to "Claude Code" deck
+flashcard-study export --deck "Python" cards.apkg          # Custom deck name
+flashcard-study export --tags algorithms cards.apkg        # Filter by tags
+flashcard-study export --deck "Web" --tags react web.apkg  # Combined
+```
+
+All cards are exported with their tags preserved. Supports QA, cloze, and multiple choice card types.
+
 ## Claude Code Commands
 
 ### `/create-flash-card`
