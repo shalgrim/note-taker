@@ -1,6 +1,6 @@
 # Note Taker - Flash Card Learning System
 
-A spaced repetition flash card system for Claude Code that helps you capture and review learnings from your coding sessions.
+A spaced repetition flash card system with both Claude Code integration and a standalone terminal UI for token-free reviews.
 
 ## Setup
 
@@ -16,7 +16,35 @@ Run the setup script to install:
 ./setup.sh
 ```
 
-## Commands
+## Standalone TUI Application
+
+### `flashcard-study`
+
+Launch the interactive terminal UI for token-free flash card management and review.
+
+```bash
+flashcard-study           # Launch TUI
+flashcard-study --stats   # Quick statistics view
+flashcard-study --help    # Show all options
+```
+
+**Features:**
+- Dashboard with statistics (due today, reviewed, streak, total)
+- Quiz mode with progress tracking and keyboard shortcuts
+- Browse and manage cards (create, edit, delete)
+- Detailed statistics screen
+- Full keyboard navigation
+
+**Keyboard Shortcuts:**
+- `s` - Start quiz
+- `l` - Browse card list
+- `n` - Create new card
+- `t` - View statistics
+- `q` - Quit
+- `Space` - Reveal answer (during quiz)
+- `0` / `5` / `1` - Score wrong/partial/correct (during quiz)
+
+## Claude Code Commands
 
 ### `/create-flash-card`
 Manually create a new flash card.

@@ -1,0 +1,159 @@
+/* Main application stylesheet */
+
+Screen {
+    background: $surface;
+}
+
+#title {
+    text-align: center;
+    text-style: bold;
+    color: $primary;
+    padding: 1;
+    content-align: center middle;
+}
+
+#stats-row {
+    height: 7;
+    align: center middle;
+    width: 100%;
+    padding: 1;
+}
+
+.stat-card {
+    border: solid $primary;
+    padding: 1;
+    margin: 0 1;
+    width: 1fr;
+    text-align: center;
+    height: 100%;
+}
+
+.stat-label {
+    color: $text-muted;
+}
+
+.stat-value {
+    text-style: bold;
+    color: $accent;
+}
+
+#actions {
+    padding: 2;
+    align: center middle;
+}
+
+Button {
+    margin: 1;
+    width: 40;
+}
+
+#quiz-container {
+    width: 90%;
+    height: 90%;
+    background: $surface;
+    border: thick $primary;
+    padding: 2;
+}
+
+.card-display {
+    height: 1fr;
+    padding: 2;
+    margin: 1;
+    border: solid $primary;
+}
+
+#progress {
+    width: 100%;
+    margin-bottom: 1;
+}
+
+#counter {
+    text-align: center;
+    margin-bottom: 1;
+    color: $text;
+}
+
+#score-row, #reveal-row {
+    align: center middle;
+    padding: 1;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Card display styling */
+.question-text {
+    color: $primary;
+    text-style: bold;
+}
+
+.answer-text {
+    color: $success;
+    text-style: bold;
+}
+
+.cloze-blank {
+    color: $warning;
+    text-style: bold;
+}
+
+.cloze-revealed {
+    color: $success;
+    text-style: bold;
+    background: $surface-lighten-1;
+}
+
+/* Button variants */
+.btn-wrong {
+    background: $error;
+}
+
+.btn-partial {
+    background: $warning;
+}
+
+.btn-correct {
+    background: $success;
+}
+
+/* Modal dialogs */
+.modal-dialog {
+    width: 80%;
+    height: 80%;
+    background: $surface;
+    border: thick $primary;
+    padding: 2;
+}
+
+/* DataTable styling */
+DataTable {
+    height: 1fr;
+}
+
+/* Form styling */
+.form-field {
+    margin: 1;
+}
+
+Label {
+    margin-bottom: 1;
+    color: $primary;
+}
+
+Input, TextArea {
+    margin-bottom: 1;
+}
+
+/* Statistics screen */
+.stat-section {
+    margin: 2;
+    padding: 1;
+    border: solid $secondary;
+}
+
+.stat-section-title {
+    color: $secondary;
+    text-style: bold;
+    margin-bottom: 1;
+}
